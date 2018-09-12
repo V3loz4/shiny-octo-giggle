@@ -50,6 +50,7 @@ bool BottomUp::parse(string word)
 								char lhs[NUMNONTERM];
 
 								grammar->getNonTerminal(A, B, lhs);
+								operations++;
 
 								for (int c = 0; c < NUMNONTERM; c++)
 								{

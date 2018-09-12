@@ -9,6 +9,7 @@ public:
 	Parser(Grammar * grm);
 	virtual bool parse(string word) = 0;
 	Grammar * grammar;
+	int operations;
 
 private:
 

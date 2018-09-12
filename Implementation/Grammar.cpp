@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "Grammar.h"
 
+Grammar::Grammar(){}
+
 Grammar::Grammar(string filePath)
 {
 	numLines = 0;
@@ -71,23 +73,14 @@ void Grammar::printRules()
 	}
 }
 
-pair<char, char> * Grammar::getRules(char a)
+int Grammar::getRules(char a, pair<char, char> * parArray)
 {
+	pair<char, char> rules[100];
 	int i = 0;
-	int	c = 0;
-	while (i < numLines)
-	{
-		if (pairLoad[i].first == a) c++;
-		i++;
-	}
-
-	pair<char, char> * rules = new pair<char, char>[c];
-	i = 0;
-	c = 0;
+	int c = 0;
 
 	while (i < numLines)
 	{
-
 		if (pairLoad[i].first == a)
 		{
 			rules[c] = pairLoad[i].second;
@@ -96,7 +89,9 @@ pair<char, char> * Grammar::getRules(char a)
 		i++;
 	}
 
-	return rules;
+	for (i = 0; i < 100; i++) parArray[i] = rules[i];
+
+	return c;
 }
 
 void Grammar::getNonTerminal(char A, char B, char * arr)
@@ -108,7 +103,6 @@ void Grammar::getNonTerminal(char A, char B, char * arr)
 
 	while (i < numLines)
 	{
-
 		if (pairLoad[i].second.first == A && pairLoad[i].second.second == B)
 		{
 			nonTerminal[c] = pairLoad[i].first;

@@ -4,4 +4,5 @@
 Parser::Parser(Grammar * grm)
 {
 	grammar = grm;
+	operations = 0;
 }

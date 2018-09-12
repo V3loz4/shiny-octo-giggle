@@ -15,7 +15,7 @@ public:
 	Grammar();
 	Grammar(string filePath);	// The grammar is inserted through a txt file
 	void printRules();
-	pair<char, char> * getRules(char a);
+	int getRules(char a, pair<char, char> * parArray);
 	void getNonTerminal(char A, char *  arr);
 	void getNonTerminal(char A, char B, char * arr);
 

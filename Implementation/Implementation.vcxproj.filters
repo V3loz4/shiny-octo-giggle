@@ -30,6 +30,15 @@
     <ClInclude Include="Naive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TopDown.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -50,5 +59,18 @@
     <ClCompile Include="Naive.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TopDown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CnfGrammar1.txt" />
+    <Text Include="InputStrings.txt" />
   </ItemGroup>
 </Project>

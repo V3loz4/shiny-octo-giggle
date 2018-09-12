@@ -14,24 +14,21 @@ bool Naive::parse(string word)
 
 bool Naive::parse(char A, int i, int j)
 {
-	pair<char, char> * parArray = grammar->getRules(A);
+	operations++;
+	pair<char, char> parArray[100];
+	int numEntries = grammar->getRules(A, parArray);
 
 	if (i == j - 1)
 	{
-		for (int a = 0;
-			a < (sizeof(parArray) / sizeof(pair<char, char>));
-			a++)
+		for (int a = 0;	a < numEntries;	a++)
 		{
 			if (wordNaive[i] == parArray[a].first) return true;
 		}
 		return false;
 	}
 
-	for (int a = 0;
-		a < (sizeof(parArray) / sizeof(pair<char, char>));
-		a++)
+	for (int a = 0;	a < numEntries; a++)
 	{
-		// TODO incremental contador global
 		if (parArray[a].second == null)
 		{
 			if (parArray[a].first == (wordNaive[i])) return true;
