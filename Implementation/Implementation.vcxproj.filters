@@ -39,6 +39,9 @@
     <ClInclude Include="StringLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Naive2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -66,6 +69,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StringLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Naive2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

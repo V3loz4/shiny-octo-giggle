@@ -15,6 +15,7 @@ class StringLoader
 		int loadStrings(string path);
 		string getStrings(int index);
 		void printStrings();
+		string enumeration(string word);
 	private:
 		string strArray[MAX];
 		int numStrings;
